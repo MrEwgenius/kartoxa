@@ -1,95 +1,76 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+import styles from "./page.module.scss";
+import ContainerHuman from "@/components/ContainerHuman/ContainerHuman";
+import { useRouter } from "next/navigation";
+import Men from "../../public/assets/img/select-man.png";
+import Woman from "../../public/assets/img/select-woman.png";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    const router = useRouter();
+    const onClickOnWomen = () => {
+        router.push("/women");
+    };
+    const onClickOnMen = () => {
+        router.push("/men");
+    };
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+    return (
+        <main className={styles.containerHome}>
+            
+            <div className={styles.title}>
+                Сколько мешков картошки стоишь ты?
+            </div>
+            <div className={styles.description}>
+                С помощью данного калькулятора можно рассчитать ценность своей
+                девушки, парня или даже самого себя в картошке. Для этого нам
+                нужно чуточку деталей об этом человеке.
+            </div>
+            <div className={styles.containerWrapper}>
+                <ContainerHuman onclick={onClickOnMen} img={Men} />
+                <ContainerHuman onclick={onClickOnWomen} img={Woman} />
+            </div>
+            <div className={styles.infoContainer}>
+                <div>
+                    <div className={styles.infoDescription}>
+                        <span>Калькулятор картошки</span> выполнен в виде
+                        викторины и в результате подсчитывает, сколько мешков
+                        картошки вы стоите. На основе вашей информации о
+                        различных характеристиках, таких как возраст, размер,
+                        цвет волос, рассчитывается количество картошки, которых
+                        стоите вы, ваш партнер или ваши друзья. Результаты
+                        несерьезны и предназначены только для развлекательных
+                        целей.
+                    </div>
+                    <div className={styles.infoDescription}>
+                        <span>Отказ от ответственности:</span> Ни при каких
+                        обстоятельствах мы не несем ответственности за точность
+                        результатов нашего подсчета мешков картошки. Это
+                        приложение создано исключительно для развлечения, и
+                        результаты должны рассматриваться как юмористические.
+                    </div>
+                </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+                <div className={styles.infoDescription}>
+                    <span>Интересный исторический факт</span> связаный с
+                    картошкой в Беларуси связан с введением её в местную
+                    культуру в XVI веке. В то время, Беларусь была частью
+                    Великого княжества Литовского, и именно там был известен
+                    этот корнеплод. По легенде, Франциск Скорина, белорусский
+                    историк и книгопечатник, ввёл картошку в пищу как часть
+                    своего стремления обогатить местное питание. Картошка была
+                    принята сначала с недовольством из-за своего внешнего вида,
+                    но впоследствии стала надежным источником пищи для местных
+                    жителей. Её легко выращивать в разнообразных климатических
+                    условиях и землях, что сделало её ценным продуктом. Со
+                    временем, картошка стала одной из основных составляющих
+                    белорусской кухни и даже способствовала смягчению
+                    последствий голодов и неурожаев, таких как те, которые
+                    испытывали ирландцы во времена Ирландского картофельного
+                    голода. В современной Беларуси картошка остается популярным
+                    продуктом и используется во множестве блюд, включая драники
+                    и картофельный салат.
+                </div>
+            </div>
+        </main>
+    );
 }

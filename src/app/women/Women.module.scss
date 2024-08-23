@@ -1,0 +1,86 @@
+.containerWomen {
+    max-width: 960px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+
+    .row {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        padding: 20px 0;
+        border-bottom: 1px solid #e7e7e7;
+        @media (max-width: 730px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            margin-bottom: 20px;
+        }
+
+        .descrRow {
+            width: 250px;
+            font-size: 26px;
+            display: flex;
+            justify-content: space-between;
+            @media (max-width: 730px) {
+                width: 100%;
+            }
+        }
+
+        .ranges {
+            width: 75%;
+            @media (max-width: 730px) {
+                width: 100%;
+            }
+        }
+        .select {
+            width: 75%;
+            border-radius: 5px;
+            height: 40px;
+            padding: 0 0 2px 5px;
+            text-transform: capitalize;
+            border: 1px solid rgb(175, 175, 175);
+            outline: none;
+            &:focus,
+            :active {
+                border: 1px solid #e8972c;
+            }
+            @media (max-width: 730px) {
+                width: 100%;
+            }
+        }
+
+        .radioButtons {
+            display: flex;
+            margin-left: 62px;
+            gap: 10px;
+            width: 100%;
+            @media (max-width: 730px) {
+                margin: 0;
+            }
+            label {
+                padding: 5px 20px 8px 20px;
+                @media (max-width: 730px) {
+                    padding: 5px 0 8px;
+                }
+            }
+           
+        }
+
+        .radioButtonsBoobs {
+            display: flex;
+            margin-left: 62px;
+            gap: 10px;
+            width: 100%;
+            @media (max-width: 730px) {
+                margin: 0;
+            }
+            @media (max-width: 500px) {
+                gap: 0px;
+            }
+            
+        }
+    }
+}
+

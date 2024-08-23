@@ -1,0 +1,26 @@
+.containerFooter {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid #e7e7e7;
+    .containerWrapper {
+        font-size: 14px;
+        color: rgb(151, 151, 151);
+        font-weight: 100;
+        padding: 10px 0;
+        display: flex;
+        gap: 10px;
+        .link {
+            // color: #080707;
+            cursor: pointer;
+
+            a {
+                color: rgb(151, 151, 151);
+                text-decoration: none;
+                transition: all 0.1s;
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+    }
+}
