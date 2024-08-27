@@ -1,11 +1,18 @@
-import React from "react"
+import React from "react";
 
 const Main = () => {
-  return (
-    <div>
-      Майн
-    </div>
-  )
-}
+    return (
+        <div
+            style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                marginTop: "100px",
+            }}
+        >
+           <h1> В разработке =(</h1>
+        </div>
+    );
+};
 
 export default Main;

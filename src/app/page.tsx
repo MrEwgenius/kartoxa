@@ -30,7 +30,7 @@ export default function Home() {
                 <ContainerHuman onclick={onClickOnWomen} img={Woman} />
             </div>
             <div className={styles.infoContainer}>
-                <div>
+                {/* <div> */}
                     <div className={styles.infoDescription}>
                         <span>Калькулятор картошки</span> выполнен в виде
                         викторины и в результате подсчитывает, сколько мешков
@@ -48,9 +48,9 @@ export default function Home() {
                         приложение создано исключительно для развлечения, и
                         результаты должны рассматриваться как юмористические.
                     </div>
-                </div>
+                {/* </div> */}
 
-                <div className={styles.infoDescription}>
+                {/* <div className={styles.infoDescription}>
                     <span>Интересный исторический факт</span> связаный с
                     картошкой в Беларуси связан с введением её в местную
                     культуру в XVI веке. В то время, Беларусь была частью
@@ -69,7 +69,7 @@ export default function Home() {
                     голода. В современной Беларуси картошка остается популярным
                     продуктом и используется во множестве блюд, включая драники
                     и картофельный салат.
-                </div>
+                </div> */}
             </div>
         </main>
     );

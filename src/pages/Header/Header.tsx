@@ -3,7 +3,7 @@ import styles from "./Header.module.scss";
 import Link from "next/link";
 const Header = () => {
     return (
-        <div className={styles.header}>
+        <header className={styles.header}>
             <div className={styles.container}>
                 <div className={styles.wrapContainer}>
                     <Link  className={styles.logo} href={"/"}>
@@ -11,11 +11,11 @@ const Header = () => {
                     </Link>
                     <div className={styles.navigation}>
                         <Link href={"/main"}>Новости</Link>
-                        <Link href={"/"}>Интересное</Link>
+                        <Link  href={"/interes"}>Интересное</Link>
                     </div>
                 </div>
             </div>
-        </div>
+        </header>
     );
 };
 
